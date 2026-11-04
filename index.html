@@ -40,7 +40,7 @@ main{max-width:1080px;margin:0 auto;padding:0 18px 70px}
 .btn{display:inline-block;font:inherit;border:0;border-radius:14px;padding:10px 22px;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none}
 .btn.alt{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
 .btn.small{padding:7px 16px;font-size:.92rem}
-.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0 40px}
+.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0 10px}
 .tile{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .15s}
 .tile:hover{transform:translateY(-3px)}
 .tile .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;margin-bottom:10px}
@@ -164,7 +164,6 @@ footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);fon
       <a class="tile" href="#play"><div class="ic" style="background:var(--feel)">♥</div><h3 data-t="tPlayH"></h3><p data-t="tPlayP"></p></a>
       <a class="tile" href="#decks"><div class="ic" style="background:var(--accent)">✦</div><h3 data-t="tDeckH"></h3><p data-t="tDeckP"></p></a>
     </div>
-    <div class="idea verse"><span data-t="idea"></span><small data-t="ideaSm"></small></div>
   </section>
 
   <!-- LEARN -->
@@ -242,8 +241,6 @@ const UI={
  tLearnH:{fa:"یاد بگیر",en:"Learn"},tLearnP:{fa:"چهار گام ارتباط همدلانه را با مثال‌های روزمره بشناس.",en:"Get to know the four steps of empathic communication through everyday examples."},
  tPlayH:{fa:"بازی کن",en:"Play"},tPlayP:{fa:"هفت بازی کارتی رایگان که روی صفحه یا با کارت‌های چاپی بازی می‌شوند.",en:"Seven free card games to play on screen or with printed cards."},
  tDeckH:{fa:"به‌زودی: کارت‌های چاپی",en:"Coming soon: printed decks"},tDeckP:{fa:"دسته‌کارت‌های زیبا و بادوام برای خانه و کلاس.",en:"Beautiful, durable card decks for home and classroom."},
- idea:{fa:"«از صدای سخنِ عشق ندیدم خوشتر<br>یادگاری که در این گنبدِ دوّار بماند»",en:"\u201CUnder this turning dome, I found no keepsake<br>sweeter than the sound of words spoken in love.\u201D"},
- ideaSm:{fa:"حافظ",en:"Hafez (free translation)"},
  learnH:{fa:"چهار گام ارتباط همدلانه",en:"The four steps of empathic communication"},
  learnP:{fa:"دکتر مارشال روزنبرگ، روان‌شناس آمریکایی، روشی ساده پیشنهاد کرد: به‌جای سرزنش و قضاوت، آنچه را می‌بینیم، حس می‌کنیم، نیاز داریم و درخواست می‌کنیم روشن بگوییم.",en:"Psychologist Dr. Marshall Rosenberg proposed a simple path: instead of blame and judgment, say clearly what we observe, feel, need and request."},
  fnH:{fa:"احساس و نیاز: دو چیز جدا",en:"Feelings and needs: two different things"},
