@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بیان امن و اثربخش · Safe and Effective Expression</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Lora:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f3ea; --ink:#2a2420; --muted:#6e645a; --line:#e6dccd; --paper:#fffdf8; --soft:#f1e8da;
+  --accent:#b4485b; --accent2:#2f6f6a;
+  --feel:#d98a2b; --need:#4c9a6a; --obs:#8a5fb0; --req:#d9673d; --sc:#b4485b; --jk:#8b6a3e; --ps:#5e6b78;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Vazirmatn,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9}
+html[lang=en] body{line-height:1.7}
+html[lang=en] h1,html[lang=en] h2,html[lang=en] .serif{font-family:Lora,Georgia,serif}
+a{color:var(--accent2)}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(248,243,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem;white-space:nowrap}
+.brand svg{width:34px;height:34px}
+.links{display:flex;gap:4px;margin-inline-start:auto;overflow-x:auto}
+.links a{text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:999px;font-size:.93rem;white-space:nowrap}
+.links a.on{background:var(--ink);color:#fff}
+.lang{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--ink);white-space:nowrap}
+@media(max-width:760px){.top .in{flex-wrap:wrap}.links{order:3;width:100%;margin:0}}
+main{max-width:1080px;margin:0 auto;padding:0 18px 70px}
+.view{display:none}.view.on{display:block}
+/* hero */
+.hero{position:relative;text-align:center;padding:70px 10px 50px;overflow:hidden}
+.hero .pattern{position:absolute;inset:0;opacity:.18;pointer-events:none}
+.hero h1{position:relative;margin:0;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:800;letter-spacing:-.01em}
+.hero .alt{position:relative;color:var(--accent);font-size:1.1rem;margin-top:2px}
+.hero p.lead{position:relative;max-width:620px;margin:18px auto 0;font-size:1.15rem;color:var(--muted)}
+.cta{position:relative;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;font:inherit;border:0;border-radius:14px;padding:10px 22px;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none}
+.btn.alt{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+.btn.small{padding:7px 16px;font-size:.92rem}
+.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0 40px}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .15s}
+.tile:hover{transform:translateY(-3px)}
+.tile .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;margin-bottom:10px}
+.tile h3{margin:0 0 4px}
+.tile p{margin:0;color:var(--muted);font-size:.95rem}
+.idea{text-align:center;background:var(--soft);border-radius:20px;padding:26px;font-size:1.2rem;font-weight:600}
+.idea small{display:block;font-weight:400;color:var(--muted);font-size:.85rem;margin-top:4px}
+/* sections */
+.pagehead{padding:44px 0 10px}
+.pagehead h1{margin:0;font-size:clamp(1.8rem,4.5vw,2.6rem)}
+.pagehead p{margin:6px 0 0;color:var(--muted);max-width:720px}
+.steps4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:24px 0}
+.st{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 20px;border-top:6px solid var(--c)}
+.st .n{font-weight:800;color:var(--c);font-size:.9rem}
+.st h3{margin:2px 0 6px}
+.st p{margin:0 0 8px;font-size:.95rem}
+.st .ex{background:var(--soft);border-radius:10px;padding:8px 12px;font-size:.92rem}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin:16px 0}
+.box h2{margin:0 0 6px;font-size:1.3rem}
+.full{background:var(--ink);color:#fff;border-radius:18px;padding:20px 24px;font-size:1.1rem;font-weight:600;margin:16px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.animal{border-radius:16px;padding:16px 18px}
+.animal h3{margin:0 0 4px}
+ol.ways{margin:6px 0 0;padding-inline-start:22px}
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--paper);border:1px solid var(--line);border-radius:22px;margin:10px 0 24px;overflow:hidden}
+.pl{padding:22px 24px;text-align:center}
+.pl+.pl{border-inline-start:1px solid var(--line)}
+.pl .pi{width:46px;height:46px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:1.2rem}
+.pl h3{margin:0 0 4px;color:var(--c);font-size:1.25rem}
+.pl p{margin:0;color:var(--muted);font-size:.93rem}
+@media(max-width:700px){.pillars{grid-template-columns:1fr}.pl+.pl{border-inline-start:0;border-top:1px solid var(--line)}}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:20px 0}
+.sk{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 20px;border-inline-start:6px solid var(--accent2)}
+.sk .n{font-size:.8rem;color:var(--accent2);font-weight:800}
+.sk h3{margin:0 0 4px}
+.sk p{margin:0 0 6px;font-size:.95rem;color:var(--muted)}
+.sk ul{margin:0 0 8px;padding-inline-start:20px;font-size:.93rem}
+.sk .ex{background:var(--soft);border-radius:10px;padding:8px 12px;font-size:.92rem}
+.win{background:linear-gradient(135deg,#2f6f6a,#24524e);color:#fff;border-radius:20px;padding:22px 26px;margin:20px 0}
+.win h2{margin:0 0 6px}
+.verse{font-weight:600;line-height:2.2}
+.verse small{display:block;font-weight:400;opacity:.75;font-size:.85rem}
+/* games */
+.gtabs{display:flex;gap:6px;flex-wrap:wrap;margin:20px 0}
+.gtabs button{font:inherit;font-size:.92rem;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;cursor:pointer;color:var(--ink)}
+.gtabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.gpanel h2{margin:0 0 2px;font-size:1.5rem}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+.rules{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:20px}
+.rules ol{margin:6px 0 0;padding-inline-start:22px}
+html[lang=fa] .rules ol{list-style-type:persian}
+.frame{background:var(--soft);border-radius:10px;padding:8px 12px;margin-top:10px;font-weight:600}
+.play{display:flex;flex-direction:column;align-items:center;gap:14px;margin:10px 0 26px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.hand{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;min-height:40px}
+.hint{font-size:.82rem;color:var(--muted)}
+.card{width:190px;min-height:250px;border-radius:18px;background:var(--paper);border:1px solid var(--line);box-shadow:0 6px 18px rgba(60,40,20,.08);display:flex;flex-direction:column;overflow:hidden}
+.card .band{height:12px;background:var(--c)}
+.card .kind{font-size:.75rem;color:var(--c);font-weight:600;padding:8px 14px 0}
+.card .face{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 16px;font-weight:600;font-size:1.05rem}
+.card .face.big{font-size:1.5rem;font-weight:800}
+.card .sub{font-size:.78rem;color:var(--muted);text-align:center;padding:0 12px 12px}
+.card.wide{width:min(420px,92vw);min-height:220px}
+.card .back{display:none;border-top:1px dashed var(--line);padding:10px 16px 14px;font-size:.9rem;background:#fbf7f0}
+.card.flipped .back{display:block}
+.card .tag{display:inline-block;border-radius:999px;padding:1px 10px;font-weight:800;color:#fff;background:var(--c);margin-bottom:4px}
+.card.clickable{cursor:pointer}
+details.deck summary{cursor:pointer;color:var(--muted);margin-bottom:12px}
+.grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.grid .card{width:160px;min-height:200px}
+.grid .card.wide{width:300px;min-height:200px}
+.grid .card .back{display:block}
+.dh{width:100%;margin:18px 0 8px;font-size:1.1rem}
+/* decks */
+.decks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:24px 0}
+.dk{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.dk .art{height:150px;display:flex;align-items:center;justify-content:center;gap:-20px;background:var(--soft)}
+.dk .art span{width:70px;height:96px;border-radius:10px;background:var(--paper);border:1px solid var(--line);border-top:8px solid var(--c);box-shadow:0 4px 10px rgba(0,0,0,.08);display:grid;place-items:center;font-weight:800;font-size:.85rem;margin:0 -10px}
+.dk .art span:nth-child(1){transform:rotate(-8deg)}.dk .art span:nth-child(3){transform:rotate(8deg)}
+.dk .body{padding:16px 18px}
+.dk h3{margin:0 0 4px}
+.dk p{margin:0;font-size:.93rem;color:var(--muted)}
+.badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:2px 12px;font-size:.8rem;font-weight:600}
+.ph{background:#fff4c9;border-radius:6px;padding:0 4px}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem;padding:24px 18px}
+@media print{.top,footer,.play,.rules,.gtabs,.pagehead,.meta,.gpanel h2{display:none!important}details.deck .grid{display:flex!important}}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+  <a class="brand" href="#home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34 C8 26 4 19 4 13.5 C4 8.5 8 5 12.5 5 C16 5 18.5 7 20 9.5 C21.5 7 24 5 27.5 5 C32 5 36 8.5 36 13.5 C36 19 32 26 20 34Z" fill="#b4485b"/><path d="M13 17 Q20 11 27 17 M15.5 21 Q20 17.5 24.5 21" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    <span data-t="brand"></span>
+  </a>
+  <nav class="links" id="links"></nav>
+  <button class="lang" id="langBtn"></button>
+</div></div>
+
+<main>
+  <!-- HOME -->
+  <section class="view" id="v-home">
+    <div class="hero">
+      <svg class="pattern" width="100%" height="100%"><defs><pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30 0 L38 22 L60 30 L38 38 L30 60 L22 38 L0 30 L22 22Z" fill="none" stroke="#b4485b" stroke-width="1"/><circle cx="30" cy="30" r="5" fill="none" stroke="#2f6f6a"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>
+      <h1 data-t="brand"></h1>
+      <div class="alt serif" data-t="brandAlt"></div>
+      <p class="lead verse" data-t="tagline" style="color:var(--ink);margin-top:14px"></p>
+      <p class="lead" data-t="lead"></p>
+      <div class="cta"><a class="btn" href="#play" data-t="ctaPlay"></a><a class="btn alt" href="#learn" data-t="ctaLearn"></a></div>
+    </div>
+    <div class="pillars">
+      <div class="pl" style="--c:var(--accent)"><div class="pi">♥</div><h3 data-t="p1h"></h3><p data-t="p1p"></p></div>
+      <div class="pl" style="--c:var(--accent2)"><div class="pi">◈</div><h3 data-t="p2h"></h3><p data-t="p2p"></p></div>
+      <div class="pl" style="--c:var(--feel)"><div class="pi">➚</div><h3 data-t="p3h"></h3><p data-t="p3p"></p></div>
+    </div>
+    <div class="tri">
+      <a class="tile" href="#learn"><div class="ic" style="background:var(--accent2)">۴</div><h3 data-t="tLearnH"></h3><p data-t="tLearnP"></p></a>
+      <a class="tile" href="#skills"><div class="ic" style="background:#24524e">✓</div><h3 data-t="tSkH"></h3><p data-t="tSkP"></p></a>
+      <a class="tile" href="#play"><div class="ic" style="background:var(--feel)">♥</div><h3 data-t="tPlayH"></h3><p data-t="tPlayP"></p></a>
+      <a class="tile" href="#decks"><div class="ic" style="background:var(--accent)">✦</div><h3 data-t="tDeckH"></h3><p data-t="tDeckP"></p></a>
+    </div>
+    <div class="idea verse"><span data-t="idea"></span><small data-t="ideaSm"></small></div>
+  </section>
+
+  <!-- LEARN -->
+  <section class="view" id="v-learn">
+    <div class="pagehead"><h1 data-t="learnH"></h1><p data-t="learnP"></p></div>
+    <div class="steps4" id="steps4"></div>
+    <div class="full" id="fullSentence"></div>
+    <div class="box"><h2 data-t="fnH"></h2><p data-t="fnP"></p></div>
+    <div class="two">
+      <div class="animal" style="background:#efe4d3"><h3 data-t="jkH"></h3><p data-t="jkP"></p></div>
+      <div class="animal" style="background:#e1ece4"><h3 data-t="grH"></h3><p data-t="grP"></p></div>
+    </div>
+    <div class="box"><h2 data-t="waysH"></h2><p data-t="waysP"></p><ol class="ways" id="ways"></ol></div>
+    <div style="text-align:center;margin-top:24px"><a class="btn" href="#play" data-t="ctaPlay"></a></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="view" id="v-skills">
+    <div class="pagehead"><h1 data-t="skH"></h1><p data-t="skP"></p></div>
+    <div class="win"><h2 data-t="winH"></h2><div data-t="winP"></div></div>
+    <div class="skills" id="skills"></div>
+    <div style="text-align:center;margin-top:24px"><a class="btn" href="#play" data-t="ctaPlay"></a></div>
+  </section>
+
+  <!-- PLAY -->
+  <section class="view" id="v-play">
+    <div class="pagehead"><h1 data-t="playH"></h1><p data-t="playP"></p></div>
+    <div class="gtabs" id="gtabs"></div>
+    <div id="gpanel" class="gpanel"></div>
+  </section>
+
+  <!-- DECKS -->
+  <section class="view" id="v-decks">
+    <div class="pagehead"><span class="badge" data-t="soon"></span><h1 data-t="decksH"></h1><p data-t="decksP"></p></div>
+    <div class="decks" id="decks"></div>
+    <div class="box"><h2 data-t="notifyH"></h2><p data-t="notifyP"></p></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="view" id="v-about">
+    <div class="pagehead"><h1 data-t="aboutH"></h1></div>
+    <div class="box"><h2 data-t="storyH"></h2><div data-t="story"></div></div>
+    <div class="box"><h2 data-t="missionH"></h2><div data-t="mission"></div></div>
+    <div class="box"><h2 data-t="creditH"></h2><div data-t="credit"></div></div>
+  </section>
+</main>
+
+<footer><div data-t="footer"></div></footer>
+
+<script>
+let L="fa";
+try{const s=localStorage.getItem("zd-lang");if(s==="en"||s==="fa")L=s}catch(e){}
+const t=x=>typeof x==="string"?x:(x[L]??x.fa);
+const esc=s=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+
+/* ---------- UI TEXT ---------- */
+const UI={
+ brand:{fa:"بیان امن و اثربخش",en:"Safe and Effective Expression"},
+ brandAlt:{fa:"Safe and Effective Expression",en:"بیان امن و اثربخش"},
+ lang:{fa:"English",en:"فارسی"},
+ tagline:{fa:"«پس زبانِ محرمی خود دیگر است<br>همدلی از هم‌زبانی بهتر است»<small>مولانا، مثنوی</small>",en:"\u201CThe language of intimacy is something else:<br>to share a heart is better than to share a tongue.\u201D<small>Rumi, Masnavi (free translation)</small>"},
+ p1h:{fa:"همدلانه",en:"Compassionate"},p1p:{fa:"از دل گفتن و با دل شنیدن؛ دیدن احساس و نیاز خود و دیگری.",en:"Speaking and listening from the heart; seeing your own and others' feelings and needs."},
+ p2h:{fa:"امن",en:"Safe"},p2p:{fa:"گفت‌وگویی بی‌تحقیر، بی‌تهدید و بی‌سرزنش، که در آن «نه» گفتن هم جا دارد.",en:"Conversations without contempt, threats or blame, where \u201Cno\u201D is allowed too."},
+ p3h:{fa:"اثربخش",en:"Effective"},p3p:{fa:"روشن و کوتاه گفتن، شنیده‌شدن و رسیدن به توافقی که هر دو پایش بایستند.",en:"Saying it clearly and briefly, being heard, and reaching agreements both sides will keep."},
+ tSkH:{fa:"روشن و اثربخش بگو",en:"Speak clearly and effectively"},tSkP:{fa:"ده مهارت برای گفتن روشن، شنیده‌شدن و رسیدن به توافق.",en:"Ten skills for speaking clearly, being heard and reaching agreement."},
+ skH:{fa:"مهارت‌های بیان اثربخش",en:"Skills for effective expression"},
+ skP:{fa:"همدلی پایه است؛ این مهارت‌ها کمک می‌کنند حرفت روشن، کوتاه و قانع‌کننده باشد، در خانه، کار و هر گفت‌وگوی سخت.",en:"Empathy is the foundation. These skills help your words be clear, concise and persuasive, at home, at work and in any hard conversation."},
+ winH:{fa:"بُردِ واقعی در بحث چیست؟",en:"What does it really mean to win an argument?"},
+ winP:{fa:"<p>اگر در بحثی طرف مقابل «ببازد»، معمولاً قانع نشده؛ فقط ساکت شده و بعداً به شکل دیگری مقاومت می‌کند. بُرد واقعی وقتی است که <b>حرفت کامل شنیده شود، نیاز هر دو طرف دیده شود و راه‌حلی پیدا شود که هر دو پایش بایستند.</b> مهارت‌های زیر برای همین بُرد ساخته شده‌اند.</p>",en:"<p>When the other person \u201Closes\u201D an argument, they're rarely convinced; they go quiet and push back later in another way. The real win is when <b>you are fully heard, both sides' needs are seen, and you reach a solution you will both stand behind.</b> The skills below are built for that kind of win.</p>"},
+ nav:{home:{fa:"خانه",en:"Home"},learn:{fa:"آموزش",en:"Learn"},skills:{fa:"مهارت‌ها",en:"Skills"},play:{fa:"بازی‌ها",en:"Games"},decks:{fa:"کارت‌های چاپی",en:"Printed decks"},about:{fa:"درباره‌ی ما",en:"About"}},
+ lead:{fa:"بازی‌ها، درس‌ها و مهارت‌هایی برای گفتن روشن، شنیدن از دل و رسیدن به توافق؛ به زبان فارسی، برای خانه، کلاس و محیط کار.",en:"Games, lessons and skills for speaking clearly, listening from the heart and reaching agreement, made for Persian speakers at home, in class and at work."},
+ ctaPlay:{fa:"شروع بازی",en:"Play the games"},
+ ctaLearn:{fa:"یادگیری چهار گام",en:"Learn the four steps"},
+ tLearnH:{fa:"یاد بگیر",en:"Learn"},tLearnP:{fa:"چهار گام ارتباط همدلانه را با مثال‌های روزمره بشناس.",en:"Get to know the four steps of empathic communication through everyday examples."},
+ tPlayH:{fa:"بازی کن",en:"Play"},tPlayP:{fa:"هفت بازی کارتی رایگان که روی صفحه یا با کارت‌های چاپی بازی می‌شوند.",en:"Seven free card games to play on screen or with printed cards."},
+ tDeckH:{fa:"به‌زودی: کارت‌های چاپی",en:"Coming soon: printed decks"},tDeckP:{fa:"دسته‌کارت‌های زیبا و بادوام برای خانه و کلاس.",en:"Beautiful, durable card decks for home and classroom."},
+ idea:{fa:"«از صدای سخنِ عشق ندیدم خوشتر<br>یادگاری که در این گنبدِ دوّار بماند»",en:"\u201CUnder this turning dome, I found no keepsake<br>sweeter than the sound of words spoken in love.\u201D"},
+ ideaSm:{fa:"حافظ",en:"Hafez (free translation)"},
+ learnH:{fa:"چهار گام ارتباط همدلانه",en:"The four steps of empathic communication"},
+ learnP:{fa:"دکتر مارشال روزنبرگ، روان‌شناس آمریکایی، روشی ساده پیشنهاد کرد: به‌جای سرزنش و قضاوت، آنچه را می‌بینیم، حس می‌کنیم، نیاز داریم و درخواست می‌کنیم روشن بگوییم.",en:"Psychologist Dr. Marshall Rosenberg proposed a simple path: instead of blame and judgment, say clearly what we observe, feel, need and request."},
+ fnH:{fa:"احساس و نیاز: دو چیز جدا",en:"Feelings and needs: two different things"},
+ fnP:{fa:"احساس (مثل نگرانی یا شادی) چیزی است که در بدن و دل تجربه می‌کنیم. نیاز (مثل امنیت یا احترام) چیزی است که برای همه‌ی انسان‌ها مهم است و ریشه‌ی آن احساس است. وقتی نیازی برآورده می‌شود، احساس خوشایند داریم و وقتی برآورده نمی‌شود، احساس ناخوشایند. برای همین در بازی‌ها، کارت‌های احساس و کارت‌های نیاز دو دسته‌ی جدا هستند.",en:"A feeling (like worry or joy) is what we experience in body and heart. A need (like safety or respect) is something every human shares, and it is the root of the feeling. When a need is met, we feel pleasant feelings; when it isn't, unpleasant ones. That's why the games keep feeling cards and need cards as two separate decks."},
+ jkH:{fa:"🐺 زبان شغال",en:"🐺 Jackal language"},
+ jkP:{fa:"زبان قضاوت، برچسب، سرزنش و «باید». شغال می‌گوید: «تو خودخواهی!»",en:"The language of judgment, labels, blame and \"should\". The jackal says: \"You're so selfish!\""},
+ grH:{fa:"🦒 زبان زرافه",en:"🦒 Giraffe language"},
+ grP:{fa:"زرافه بزرگ‌ترین قلب را در میان حیوانات خشکی دارد. زبان زرافه، زبان دل است: «دلخوری چون می‌خواهی دیده شوی؟»",en:"The giraffe has the largest heart of any land animal. Giraffe language is the language of the heart: \"Are you upset because you want to be seen?\""},
+ waysH:{fa:"چهار راه شنیدن یک پیام سخت",en:"Four ways to hear a difficult message"},
+ waysP:{fa:"وقتی کسی حرف تندی می‌زند، چهار انتخاب داریم:",en:"When someone says something harsh, we have four choices:"},
+ playH:{fa:"بازی‌ها",en:"The games"},
+ playP:{fa:"یک بازی را انتخاب کن. کارت بکش، روی کارت بزن تا پاسخ را ببینی، یا همه‌ی کارت‌ها را برای چاپ باز کن.",en:"Pick a game. Draw a card, tap it to see the answer, or open the full deck to print."},
+ draw:{fa:"کشیدن کارت",en:"Draw a card"},
+ drawBoth:{fa:"کشیدن یک کارت از هر دسته",en:"Draw one card from each deck"},
+ clear:{fa:"پاک کردن",en:"Clear"},
+ tapHint:{fa:"برای دیدن پاسخ، روی کارت بزنید.",en:"Tap a card to see the answer."},
+ allCards:{fa:"همه‌ی کارت‌های این بازی (برای چاپ)",en:"All cards in this game (for printing)"},
+ howTo:{fa:"طرز بازی",en:"How to play"},
+ feelDeck:{fa:"دسته‌ی ۱: کارت‌های احساس",en:"Deck 1: Feeling cards"},
+ needDeck:{fa:"دسته‌ی ۲: کارت‌های نیاز",en:"Deck 2: Need cards"},
+ soon:{fa:"به‌زودی",en:"Coming soon"},
+ decksH:{fa:"کارت‌های چاپی «بیان امن و اثربخش»",en:"Safe and Effective Expression: printed decks"},
+ decksP:{fa:"همین بازی‌ها به‌زودی به شکل دسته‌کارت‌های چاپی، با کیفیت بالا و دفترچه‌ی راهنما، در دسترس خواهند بود.",en:"These games will soon be available as high-quality printed decks with a rules booklet."},
+ notifyH:{fa:"باخبر شوید",en:"Stay in touch"},
+ notifyP:{fa:"برای اطلاع از عرضه‌ی کارت‌ها، به ما ایمیل بزنید: <span class=ph>[ایمیل شما]</span>",en:"To hear when the decks are released, email us at <span class=ph>[your email]</span>"},
+ aboutH:{fa:"درباره‌ی «بیان امن و اثربخش»",en:"About Safe and Effective Expression"},
+ storyH:{fa:"داستان من",en:"My story"},
+ story:{fa:"<p>سلام، من <span class=ph>[نام شما]</span> هستم. ارتباط بدون خشونت شیوه‌ی گفت‌وگوی مرا با خودم و دیگران تغییر داد. دیدم که چقدر کم پیش می‌آید این ابزارها به زبان فارسی، ساده و بازی‌گونه، در دسترس باشند.</p><p>برای همین کارم را رها کردم تا تمام وقتم را صرف این پروژه کنم. بیان امن و اثربخش کاری مستقل و فردی است؛ بدون سازمان، تیم یا سرمایه‌ی بیرونی، و تنها با این امید که همدلی در خانه‌ها و کلاس‌های ما جای بیشتری پیدا کند.</p>",
+        en:"<p>Hi, I'm <span class=ph>[your name]</span>. Nonviolent Communication changed the way I speak with myself and with others. I also saw how rarely these tools are available in Farsi in a simple, playful form.</p><p>So I left my job to give this project my full time. Safe and Effective Expression is an independent, one-person effort, with no organization, team or outside funding behind it, only the hope that empathy can take up more space in our homes and classrooms.</p>"},
+ missionH:{fa:"مأموریت",en:"Mission"},
+ mission:{fa:"<p>بسیاری از فارسی‌زبانان در جامعه‌هایی زندگی می‌کنند که خشونت کلامی و غیرکلامی رایج است و ارتباط همدلانه جایی در مدرسه، محیط کار و نهادهای عمومی ندارد. بیان امن و اثربخش می‌خواهد ابزارهای ساده، رایگان و شاد برای شنیدن و گفتن از دل، در دسترس هر خانواده و هر معلم فارسی‌زبان قرار دهد.</p>",
+        en:"<p>Many Persian speakers live in societies where verbal and non-verbal violence is common, and where empathic communication has little place in schools, workplaces or public institutions. Safe and Effective Expression aims to put simple, free and joyful tools for speaking and listening from the heart in the hands of every Persian-speaking family and teacher.</p>"},
+ creditH:{fa:"منبع و قدردانی",en:"Credit"},
+ credit:{fa:"<p>محتوای این سایت بر پایه‌ی آثار دکتر مارشال روزنبرگ و مرکز ارتباط بدون خشونت (<a href='https://www.cnvc.org'>cnvc.org</a>) است. بیان امن و اثربخش پروژه‌ای مستقل است و وابسته به آن مرکز یا مورد تأیید رسمی آن نیست. برای آموزش عمیق‌تر، به مربیان رسمی آن مرکز مراجعه کنید.</p>",
+        en:"<p>This site is based on the work of Dr. Marshall Rosenberg and the Center for Nonviolent Communication (<a href='https://www.cnvc.org'>cnvc.org</a>). Safe and Effective Expression is an independent project and is not affiliated with or endorsed by CNVC. For deeper learning, please seek out CNVC Certified Trainers.</p>"},
+ footer:{fa:"بیان امن و اثربخش · بر پایه‌ی آثار دکتر مارشال روزنبرگ و مرکز ارتباط بدون خشونت · پروژه‌ای مستقل",en:"Safe and Effective Expression · Based on the work of Dr. Marshall Rosenberg and the Center for Nonviolent Communication · An independent project"}
+};
+
+const STEPS=[
+ {c:"var(--obs)",n:{fa:"گام ۱",en:"Step 1"},h:{fa:"مشاهده",en:"Observation"},p:{fa:"آنچه دیدی یا شنیدی را مثل یک دوربین بگو؛ بدون قضاوت و برچسب.",en:"Say what you saw or heard, like a camera would record it, without judgment or labels."},ex:{fa:"«وقتی می‌بینم سه بشقاب از دیشب در سینک مانده…»",en:"\"When I see three plates from last night still in the sink…\""}},
+ {c:"var(--feel)",n:{fa:"گام ۲",en:"Step 2"},h:{fa:"احساس",en:"Feeling"},p:{fa:"حسی را که در تو بیدار شده نام ببر؛ نه فکر یا تفسیرت را.",en:"Name the feeling that came up in you, not your thought or interpretation."},ex:{fa:"«…احساس دلسردی و خستگی می‌کنم…»",en:"\"…I feel discouraged and tired…\""}},
+ {c:"var(--need)",n:{fa:"گام ۳",en:"Step 3"},h:{fa:"نیاز",en:"Need"},p:{fa:"بگو چه چیزی برایت مهم است که این احساس از آن می‌آید.",en:"Say what matters to you, the need that this feeling comes from."},ex:{fa:"«…چون نظم و همکاری در خانه برایم مهم است.»",en:"\"…because order and cooperation at home matter to me.\""}},
+ {c:"var(--req)",n:{fa:"گام ۴",en:"Step 4"},h:{fa:"درخواست",en:"Request"},p:{fa:"یک کار مشخص، مثبت و شدنی بخواه؛ و جای «نه» گفتن را باز بگذار.",en:"Ask for something specific, positive and doable, and leave room for a \"no\"."},ex:{fa:"«حاضری امشب قبل از خواب آن‌ها را بشویی؟»",en:"\"Would you be willing to wash them tonight before bed?\""}}
+];
+const FULL={fa:"«وقتی می‌بینم سه بشقاب از دیشب در سینک مانده، احساس دلسردی و خستگی می‌کنم، چون نظم و همکاری در خانه برایم مهم است. حاضری امشب قبل از خواب آن‌ها را بشویی؟»",en:"\"When I see three plates from last night still in the sink, I feel discouraged and tired, because order and cooperation at home matter to me. Would you be willing to wash them tonight before bed?\""};
+const WAYS=[
+ {fa:"<b>سرزنش خود:</b> «حق با اوست، من آدم بدی‌ام.»",en:"<b>Blame myself:</b> \"They're right, I'm a bad person.\""},
+ {fa:"<b>سرزنش دیگری:</b> «خودش بدتر است!»",en:"<b>Blame the other:</b> \"Look who's talking!\""},
+ {fa:"<b>شنیدن احساس و نیاز خودم:</b> «دلم گرفت، چون به احترام نیاز دارم.»",en:"<b>Hear my own feelings and needs:</b> \"I'm hurt, because I need respect.\""},
+ {fa:"<b>شنیدن احساس و نیاز او:</b> «شاید خسته است و به کمک نیاز دارد.»",en:"<b>Hear their feelings and needs:</b> \"Maybe they're exhausted and need support.\""}
+];
+
+const SKILLS=[
+ {h:{fa:"اول اصلِ حرف",en:"Main point first"},p:{fa:"شنونده حوصله‌ی مقدمه‌ی طولانی ندارد.",en:"Listeners lose patience with long preambles."},
+  b:{fa:["خواسته یا نتیجه را در یک جمله بگو.","بعد دلیل و توضیح را بیاور.","پیش از گفتن بپرس: «اگر فقط یک جمله بگویم، چه می‌گویم؟»"],en:["State your request or conclusion in one sentence.","Then give the reason and details.","Before speaking, ask: \u201CIf I could say only one sentence, what would it be?\u201D"]},
+  ex:{fa:"«می‌خواهم جلسه‌ی هفتگی را به صبح‌ها ببریم. دلیلش این است که…»",en:"\u201CI'd like to move our weekly meeting to mornings. Here's why…\u201D"}},
+ {h:{fa:"کوتاه، مشخص، یک موضوع",en:"Short, specific, one topic"},p:{fa:"هر چه موضوع‌ها بیشتر، اثر کمتر.",en:"The more topics at once, the less impact."},
+  b:{fa:["در هر گفت‌وگو فقط یک موضوع.","«همیشه» و «هیچ‌وقت» را کنار بگذار.","از عدد، زمان و مثال واقعی استفاده کن."],en:["One topic per conversation.","Drop \u201Calways\u201D and \u201Cnever\u201D.","Use numbers, times and real examples."]},
+  ex:{fa:"به‌جای «تو هیچ‌وقت کمک نمی‌کنی» بگو: «این هفته سه شب تنها آشپزی کردم.»",en:"Instead of \u201CYou never help\u201D: \u201CI cooked alone three nights this week.\u201D"}},
+ {h:{fa:"گوش دادن فعال و بازتاب",en:"Active listening and reflecting"},p:{fa:"آدم‌ها وقتی احساس کنند شنیده شده‌اند، تازه آماده‌ی شنیدن می‌شوند.",en:"People become ready to listen once they feel heard."},
+  b:{fa:["حرف طرف را با کلمات خودت خلاصه کن.","پیش از جواب دادن بپرس: «درست فهمیدم؟»","وسط حرفش جواب نساز."],en:["Summarize what they said in your own words.","Before replying, ask: \u201CDid I get that right?\u201D","Don't build your reply while they're talking."]},
+  ex:{fa:"«اگر درست فهمیده باشم، نگرانی که پروژه دیر تحویل شود؟»",en:"\u201CIf I understand you, you're worried the project will be late?\u201D"}},
+ {h:{fa:"پرسیدن به‌جای فرض کردن",en:"Ask instead of assuming"},p:{fa:"بیشتر دعواها از حدس‌های نادرست درباره‌ی نیت دیگران شروع می‌شود.",en:"Many conflicts start with wrong guesses about intent."},
+  b:{fa:["سؤال باز بپرس: «چه چیزی برایت مهم است؟»","«چرا» را با «چه چیزی» عوض کن؛ «چرا» حالت بازجویی دارد.","کنجکاو بمان، نه قاضی."],en:["Ask open questions: \u201CWhat matters most to you here?\u201D","Swap \u201Cwhy\u201D for \u201Cwhat\u201D; \u201Cwhy\u201D can sound like an interrogation.","Stay curious, not judging."]},
+  ex:{fa:"به‌جای «چرا دیر کردی؟» بپرس: «چه شد که دیر شد؟»",en:"Instead of \u201CWhy are you late?\u201D: \u201CWhat happened that made you late?\u201D"}},
+ {h:{fa:"موضع در برابر نیاز",en:"Positions vs. needs"},p:{fa:"دو نفر ممکن است سر «راه‌حل» دعوا کنند، در حالی که نیازهایشان با هم جمع‌شدنی است.",en:"Two people may fight over a solution when their underlying needs can both be met."},
+  b:{fa:["بپرس: پشت این خواسته چه نیازی است؟","برای هر دو نیاز، چند راه‌حل بساز.","راهی را انتخاب کن که هر دو را در بر بگیرد."],en:["Ask: what need is behind this demand?","Brainstorm several options that serve both needs.","Choose the one that covers both."]},
+  ex:{fa:"یکی می‌خواهد پنجره باز باشد (هوای تازه)، دیگری بسته (سرما نخورد). راه‌حل: پنجره‌ی اتاق کناری را باز کنیم.",en:"One wants the window open (fresh air), the other closed (no draft). Solution: open the window in the next room."}},
+ {h:{fa:"قاطعیتِ مهربان",en:"Kind assertiveness"},p:{fa:"«نه» گفتن روشن، به رابطه آسیب نمی‌زند؛ «بله»ی از سر اجبار، می‌زند.",en:"A clear \u201Cno\u201D doesn't harm a relationship; a resentful \u201Cyes\u201D does."},
+  b:{fa:["کوتاه و بدون عذرخواهی‌های پشت سر هم «نه» بگو.","نیازت را بگو.","اگر می‌توانی، یک «بله»ی دیگر پیشنهاد بده."],en:["Say no briefly, without piling on apologies.","Name your need.","If you can, offer a different \u201Cyes\u201D."]},
+  ex:{fa:"«این آخر هفته نمی‌توانم بیایم، چون به استراحت نیاز دارم. هفته‌ی بعد چطور است؟»",en:"\u201CI can't come this weekend because I need rest. How about next week?\u201D"}},
+ {h:{fa:"بهترین نسخه‌ی حرفِ طرف مقابل",en:"Steelman the other side"},p:{fa:"قانع‌کننده‌ترین کار در بحث این است که نظر طرف را بهتر از خودش بیان کنی.",en:"The most persuasive move is to state their view better than they did."},
+  b:{fa:["پیش از مخالفت، دیدگاه او را منصفانه خلاصه کن.","بپرس آیا درست گفتی.","بعد دیدگاه خودت را بگو."],en:["Before disagreeing, summarize their view fairly.","Ask if you got it right.","Then give your view."]},
+  ex:{fa:"«می‌فهمم که برایت صرفه‌جویی مهم است و این خرید را لازم نمی‌بینی. نگاه من کمی فرق دارد…»",en:"\u201CI get that saving money matters to you and you don't see this as necessary. My view is a bit different…\u201D"}},
+ {h:{fa:"لحن، سرعت و بدن",en:"Tone, pace and body"},p:{fa:"بیشتر پیام از راه لحن و حالت بدن می‌رسد، نه فقط کلمات.",en:"Much of a message travels through tone and posture, not just words."},
+  b:{fa:["آهسته‌تر و آرام‌تر حرف بزن.","تماس چشمی ملایم داشته باش.","پیش از جواب، یک نفس عمیق مکث کن."],en:["Speak slower and softer.","Keep gentle eye contact.","Take one deep breath before replying."]},
+  ex:{fa:"مکث سه‌ثانیه‌ای پیش از پاسخ، اغلب از یک جمله‌ی تند جلوگیری می‌کند.",en:"A three-second pause before answering often prevents a harsh sentence."}},
+ {h:{fa:"آرام‌کردن تنش",en:"De-escalation"},p:{fa:"وقتی خشم بالاست، کسی چیزی نمی‌شنود.",en:"When anger is high, no one can hear anything."},
+  b:{fa:["تنش را نام ببر، بدون سرزنش.","یک وقفه‌ی کوتاه پیشنهاد کن.","زمان مشخصی برای ادامه بگذار."],en:["Name the tension without blame.","Suggest a short break.","Set a specific time to continue."]},
+  ex:{fa:"«الان آن‌قدر ناراحتم که نمی‌توانم خوب گوش بدهم. بیست دقیقه بعد ادامه بدهیم؟»",en:"\u201CI'm too upset to listen well right now. Can we continue in twenty minutes?\u201D"}},
+ {h:{fa:"پایانِ روشن",en:"A clear ending"},p:{fa:"گفت‌وگوی خوب بدون جمع‌بندی، زود فراموش می‌شود.",en:"A good conversation without a summary is quickly forgotten."},
+  b:{fa:["توافق را خلاصه کن: چه کسی، چه کاری، تا کی.","بپرس آیا چیزی جا مانده.","قدردانی کن."],en:["Summarize the agreement: who does what, by when.","Ask if anything is missing.","Say thank you."]},
+  ex:{fa:"«پس من تا پنجشنبه با مدرسه تماس می‌گیرم و تو برنامه‌ی جمعه را می‌چینی. درست است؟ ممنون که گوش دادی.»",en:"\u201CSo I'll call the school by Thursday and you'll plan Friday. Right? Thanks for listening.\u201D"}}
+];
+const CLEAR=[
+ [{fa:"خب، راستش نمی‌دونم، شاید اگه وقت داشتی یه نگاهی به اون چیزه بندازی…",en:"Well, I don't know, maybe if you have time you could sort of look at that thing…"},{fa:"«می‌شه تا فردا ظهر گزارش فروش رو بخونی و نظرت رو بگی؟»",en:"\u201CCould you read the sales report by tomorrow noon and tell me what you think?\u201D"}],
+ [{fa:"تو هیچ‌وقت برای من وقت نمی‌ذاری.",en:"You never make time for me."},{fa:"«دلم برایت تنگ شده. حاضری جمعه عصر دو ساعت با هم بیرون برویم؟»",en:"\u201CI miss you. Would you go out with me for two hours on Friday evening?\u201D"}],
+ [{fa:"این طرح اصلاً خوب نیست.",en:"This plan is no good."},{fa:"«نگرانم این طرح در بودجه جا نشود؛ بخش دوم ۲۰٪ از سقف ما بیشتر است. یک گزینه‌ی ارزان‌تر هم ببینیم؟»",en:"\u201CI'm worried this plan won't fit the budget; part two is 20% over our limit. Can we look at a cheaper option too?\u201D"}],
+ [{fa:"باشه، هر چی تو بگی.",en:"Fine, whatever you say."},{fa:"«راستش با این برنامه راحت نیستم، چون زمان استراحتم را می‌گیرد. پیشنهادم این است که…»",en:"\u201CHonestly I'm not comfortable with this plan, because it takes my rest time. What I'd suggest is…\u201D"}],
+ [{fa:"یه کم کمک کن دیگه!",en:"Help out a little, come on!"},{fa:"«می‌شه امشب تو ظرف‌ها رو بشوری و من شام رو درست کنم؟»",en:"\u201CCould you do the dishes tonight while I make dinner?\u201D"}],
+ [{fa:"من فقط می‌گم شاید بهتر باشه یه جوری متفاوت‌تر باشه.",en:"I'm just saying maybe it'd be better if it were somehow different."},{fa:"«پیشنهادم این است که جلسه را از ساعت ۱۰ به ۹ ببریم تا قبل از ناهار تمام شود.»",en:"\u201CI suggest we move the meeting from 10 to 9 so it ends before lunch.\u201D"}],
+ [{fa:"چرا اینقدر دیر جواب می‌دی؟!",en:"Why do you take so long to reply?!"},{fa:"«وقتی پیام‌ها تا عصر بی‌جواب می‌ماند، نگران کارها می‌شوم. می‌شه موارد فوری را تا ظهر جواب بدهی؟»",en:"\u201CWhen messages go unanswered until evening, I worry about the work. Could you answer urgent ones by noon?\u201D"}],
+ [{fa:"نمی‌خوام بیام.",en:"I don't want to come."},{fa:"«این بار نمی‌آیم چون به استراحت نیاز دارم؛ ولی هفته‌ی بعد با کمال میل.»",en:"\u201CI'll skip this time because I need rest, but I'd love to come next week.\u201D"}],
+ [{fa:"همه می‌گن تو بداخلاقی.",en:"Everyone says you're rude."},{fa:"«امروز در جلسه وقتی با صدای بلند جواب دادی، جا خوردم. دوست دارم بدانم چه چیزی اذیتت کرده بود.»",en:"\u201CIn today's meeting, when you answered loudly, I was taken aback. I'd like to know what was bothering you.\u201D"}],
+ [{fa:"یه کاریش بکن!",en:"Just do something about it!"},{fa:"«لطفاً تا پنجشنبه با پیمانکار تماس بگیر و تاریخ تعمیر را مشخص کن.»",en:"\u201CPlease call the contractor by Thursday and set a date for the repair.\u201D"}]
+];
+
+/* ---------- CARD DATA ---------- */
+const FEEL_MET=[["شاد","happy"],["آرام","calm"],["سپاسگزار","grateful"],["امیدوار","hopeful"],["کنجکاو","curious"],["سرزنده","alive"],["مشتاق","eager"],["آسوده","relieved"],["دلگرم","encouraged"],["شگفت‌زده","amazed"],["مهربان","tender"],["الهام‌گرفته","inspired"],["راضی","content"],["پرانرژی","energetic"],["سبک‌بال","light-hearted"],["قدردان","appreciative"],["مطمئن","confident"],["هیجان‌زده","excited"],["صمیمی","warm"],["خوشحال","glad"],["دلباز","open"],["سرشار","fulfilled"],["آسوده‌خاطر","at ease"],["مفتخر","proud"]];
+const FEEL_UNMET=[["غمگین","sad"],["نگران","worried"],["ناامید","disappointed"],["خسته","tired"],["دلخور","annoyed"],["عصبانی","angry"],["ترسیده","scared"],["تنها","lonely"],["سردرگم","confused"],["مضطرب","anxious"],["دلسرد","discouraged"],["کلافه","frustrated"],["شرمنده","embarrassed"],["بی‌حوصله","bored"],["دلتنگ","longing"],["بی‌قرار","restless"],["آشفته","agitated"],["درمانده","helpless"],["رنجیده","hurt"],["بی‌تاب","impatient"],["معذب","uncomfortable"],["دلشکسته","heartbroken"],["حیرت‌زده","shocked"],["ناامن","insecure"]];
+const CAT={c:["ارتباط","connection"],b:["جسم","physical well-being"],i:["یکپارچگی","integrity"],p:["بازی","play"],q:["آرامش","peace"],a:["استقلال","autonomy"],m:["معنا","meaning"]};
+const NEEDS=[["پذیرش","acceptance","c"],["محبت","affection","c"],["قدردانی","appreciation","c"],["تعلق","belonging","c"],["همکاری","cooperation","c"],["صمیمیت","closeness","c"],["همدلی","empathy","c"],["اعتماد","trust","c"],["احترام","respect","c"],["دیده‌شدن","to be seen","c"],["شنیده‌شدن","to be heard","c"],["حمایت","support","c"],["استراحت","rest","b"],["امنیت","safety","b"],["سلامتی","health","b"],["حرکت","movement","b"],["صداقت","honesty","i"],["اصالت","authenticity","i"],["شادی و بازی","fun","p"],["طنز و سبکی","humor","p"],["آرامش","peace","q"],["نظم","order","q"],["زیبایی","beauty","q"],["هماهنگی","harmony","q"],["انتخاب","choice","a"],["آزادی","freedom","a"],["استقلال","independence","a"],["یادگیری","learning","m"],["خلاقیت","creativity","m"],["مشارکت","contribution","m"],["رشد","growth","m"],["هدف","purpose","m"],["شایستگی","competence","m"],["معنا","meaning","m"]];
+const OBS=[
+ [{fa:"تو همیشه دیر می‌کنی.",en:"You're always late."},0,{fa:"«همیشه» یک تعمیم است. مشاهده: «این هفته سه بار بعد از ساعت ۹ رسیدی.»",en:"\"Always\" is a generalization. Observation: \"You arrived after 9 three times this week.\""}],
+ [{fa:"این هفته سه بار بعد از ساعت ۹ به جلسه رسیدی.",en:"You arrived at the meeting after 9 three times this week."},1,{fa:"زمان و تعداد مشخص است؛ هر دوربینی همین را ثبت می‌کرد.",en:"Time and count are specific; any camera would record this."}],
+ [{fa:"پسرم تنبل است.",en:"My son is lazy."},0,{fa:"برچسب است. مشاهده: «پسرم امروز تکلیف ریاضی‌اش را انجام نداد.»",en:"A label. Observation: \"My son didn't do his math homework today.\""}],
+ [{fa:"در جلسه، مریم دو بار وسط حرفم شروع به صحبت کرد.",en:"In the meeting, Maryam started talking while I was speaking twice."},1,{fa:"رفتار مشخص و قابل شمارش.",en:"Specific, countable behavior."}],
+ [{fa:"تو هیچ‌وقت به حرف‌هایم گوش نمی‌دهی.",en:"You never listen to me."},0,{fa:"«هیچ‌وقت» و «گوش نمی‌دهی» تفسیرند. مشاهده: «وقتی حرف می‌زدم، به گوشی‌ات نگاه می‌کردی.»",en:"\"Never\" and \"don't listen\" are interpretations. Observation: \"While I was talking, you were looking at your phone.\""}],
+ [{fa:"پدرم دیشب در طول شام به تلفنش نگاه می‌کرد.",en:"My father looked at his phone during dinner last night."},1,{fa:"توصیف رفتار، بدون قضاوت درباره‌ی نیت.",en:"Describes behavior with no judgment of intent."}],
+ [{fa:"مدیرم آدم بی‌انصافی است.",en:"My manager is unfair."},0,{fa:"ارزیابی شخصیت. مشاهده: «مدیرم پروژه‌ی جدید را بدون پرسیدن به من سپرد.»",en:"A character judgment. Observation: \"My manager gave me the new project without asking.\""}],
+ [{fa:"دوستم دو هفته است به پیامم جواب نداده.",en:"My friend hasn't replied to my message in two weeks."},1,{fa:"واقعیت قابل بررسی است.",en:"A checkable fact."}],
+ [{fa:"او خیلی خودخواه است.",en:"She's so selfish."},0,{fa:"برچسب است؛ بگو دقیقاً چه کاری کرد.",en:"A label; say exactly what she did."}],
+ [{fa:"علی دیروز بی‌دلیل سرم داد زد.",en:"Ali yelled at me yesterday for no reason."},0,{fa:"«بی‌دلیل» تفسیر ماست. مشاهده: «علی دیروز با صدای بلند گفت: برو بیرون.»",en:"\"For no reason\" is our interpretation. Observation: \"Yesterday Ali said loudly: get out.\""}],
+ [{fa:"اتاقت شده مثل انباری!",en:"Your room looks like a storage closet!"},0,{fa:"مقایسه و قضاوت. مشاهده: «لباس‌ها روی زمین است و سه بشقاب روی میز.»",en:"Comparison and judgment. Observation: \"There are clothes on the floor and three plates on the desk.\""}],
+ [{fa:"همسرم این ماه سه بار ظرف‌ها را در سینک گذاشت و رفت.",en:"This month my spouse left the dishes in the sink three times."},1,{fa:"مشخص و قابل شمارش.",en:"Specific and countable."}],
+ [{fa:"سارا خیلی زیاد حرف می‌زند.",en:"Sara talks way too much."},0,{fa:"«خیلی زیاد» ارزیابی است. مشاهده: «سارا در جلسه‌ی یک‌ساعته حدود چهل دقیقه صحبت کرد.»",en:"\"Too much\" is an evaluation. Observation: \"Sara spoke for about forty minutes in the one-hour meeting.\""}],
+ [{fa:"همکارم عمداً اسم مرا در گزارش نیاورد.",en:"My coworker deliberately left my name off the report."},0,{fa:"«عمداً» حدس درباره‌ی نیت است. مشاهده: «اسم من در فهرست گزارش نیامده بود.»",en:"\"Deliberately\" guesses at intent. Observation: \"My name wasn't on the report's list.\""}]
+];
+const REQ=[
+ [{fa:"می‌شه امشب ده دقیقه درباره‌ی برنامه‌ی آخر هفته حرف بزنیم؟",en:"Could we talk for ten minutes tonight about the weekend plan?"},1,{fa:"مشخص، مثبت و قابل انجام؛ جای «نه» هم باز است.",en:"Specific, positive, doable, and \"no\" is still an option."}],
+ [{fa:"دیگه هیچ‌وقت این کار رو نکن!",en:"Don't ever do that again!"},0,{fa:"منفی است (چه نکن) و تحکم دارد. بگو چه کاری را می‌خواهی.",en:"Negative (what not to do) and commanding. Say what you do want."}],
+ [{fa:"می‌خوام بیشتر به من احترام بذاری.",en:"I want you to respect me more."},0,{fa:"مبهم است. مثلاً: «می‌شه وقتی حرف می‌زنم صبر کنی تا تموم بشه؟»",en:"Vague. For example: \"Would you wait until I finish speaking?\""}],
+ [{fa:"حاضری قبل از رفتن ظرف‌های خودت رو بشوری؟",en:"Would you be willing to wash your dishes before you leave?"},1,{fa:"کار مشخص و زمان مشخص.",en:"A specific action and a specific time."}],
+ [{fa:"باید به حرفم گوش کنی، وگرنه…",en:"You have to listen to me, or else…"},0,{fa:"تهدید دارد؛ پس خواسته (تحکم) است، نه درخواست.",en:"It carries a threat, so it's a demand, not a request."}],
+ [{fa:"می‌شه بگی از حرف من چی شنیدی؟",en:"Could you tell me what you heard me say?"},1,{fa:"درخواست ارتباطی: می‌خواهیم مطمئن شویم پیام درست رسیده.",en:"A connection request: checking that the message landed."}],
+ [{fa:"کاش یه کم مسئولیت‌پذیرتر بودی.",en:"I wish you were a bit more responsible."},0,{fa:"آرزوی مبهم است، نه کار مشخص.",en:"A vague wish, not a specific action."}],
+ [{fa:"دوست دارم بدونم وقتی اینو شنیدی چه حسی پیدا کردی؟",en:"I'd like to know how you felt when you heard that."},1,{fa:"درخواست ارتباطی و روشن.",en:"A clear connection request."}],
+ [{fa:"لطفاً پنجشنبه تا ساعت ۸ گزارش رو بفرست؛ اگه شدنی نیست بگو تا با هم راهی پیدا کنیم.",en:"Please send the report by 8 on Thursday; if that won't work, tell me and we'll find a way together."},1,{fa:"مشخص است و «نه» را هم می‌پذیرد.",en:"Specific, and it welcomes a \"no\"."}],
+ [{fa:"از تو انتظار دارم بیشتر کمک کنی.",en:"I expect you to help more."},0,{fa:"مبهم و با بار اجبار. چه کمکی، کی؟",en:"Vague and pressuring. What help, and when?"}],
+ [{fa:"خواهش می‌کنم کمتر غر بزن.",en:"Please complain less."},0,{fa:"منفی و قضاوتی. مثلاً: «وقتی چیزی اذیتت می‌کنه، حاضری یه بار بگی و بعد با هم راه‌حل پیدا کنیم؟»",en:"Negative and judging. Try: \"When something bothers you, would you tell me once and then we look for a solution together?\""}],
+ [{fa:"حاضری این هفته دو شب زودتر از ۱۰ گوشی رو کنار بذاری تا با هم فیلم ببینیم؟",en:"Would you put your phone away before 10 on two nights this week so we can watch a movie together?"},1,{fa:"مثبت، مشخص، قابل‌اندازه‌گیری.",en:"Positive, specific, measurable."}]
+];
+const PSEUDO=[
+ [{fa:"احساس می‌کنم نادیده گرفته شدم.",en:"I feel ignored."},0,{fa:"این فکر است درباره‌ی کار دیگری. احساس‌های احتمالی: تنها، دلخور، غمگین.",en:"A thought about what someone did. Possible feelings: lonely, annoyed, sad."}],
+ [{fa:"احساس می‌کنم طرد شدم.",en:"I feel rejected."},0,{fa:"تفسیر است. احساس‌های احتمالی: دلشکسته، ناامن، غمگین.",en:"An interpretation. Possible feelings: heartbroken, insecure, sad."}],
+ [{fa:"احساس می‌کنم فریبم دادند.",en:"I feel cheated."},0,{fa:"اتهام است. احساس‌های احتمالی: عصبانی، رنجیده، حیرت‌زده.",en:"An accusation. Possible feelings: angry, hurt, shocked."}],
+ [{fa:"احساس می‌کنم تحقیر شدم.",en:"I feel belittled."},0,{fa:"قضاوت کار دیگری است. احساس‌های احتمالی: شرمنده، عصبانی، دلخور.",en:"A judgment of someone's action. Possible feelings: embarrassed, angry, annoyed."}],
+ [{fa:"احساس می‌کنم ازم سوءاستفاده شده.",en:"I feel used."},0,{fa:"تفسیر است. احساس‌های احتمالی: خشمگین، خسته، ناامید.",en:"An interpretation. Possible feelings: furious, tired, disappointed."}],
+ [{fa:"احساس می‌کنم تنهام گذاشتند.",en:"I feel abandoned."},0,{fa:"تفسیر است. احساس‌های احتمالی: تنها، ترسیده، غمگین.",en:"An interpretation. Possible feelings: lonely, scared, sad."}],
+ [{fa:"احساس می‌کنم کسی منو نمی‌فهمه.",en:"I feel misunderstood."},0,{fa:"فکر است. احساس‌های احتمالی: تنها، دلسرد، کلافه.",en:"A thought. Possible feelings: lonely, discouraged, frustrated."}],
+ [{fa:"احساس می‌کنم قضاوت شدم.",en:"I feel judged."},0,{fa:"تفسیر است. احساس‌های احتمالی: معذب، نگران، رنجیده.",en:"An interpretation. Possible feelings: uncomfortable, worried, hurt."}],
+ [{fa:"احساس می‌کنم بی‌ارزشم.",en:"I feel worthless."},0,{fa:"ارزیابی خود است. احساس‌های احتمالی: غمگین، ناامید، دلسرد.",en:"A self-evaluation. Possible feelings: sad, hopeless, discouraged."}],
+ [{fa:"احساس می‌کنم حق با منه.",en:"I feel that I'm right."},0,{fa:"این یک باور است، نه احساس.",en:"This is a belief, not a feeling."}],
+ [{fa:"احساس می‌کنم تحت فشار گذاشته شدم.",en:"I feel pressured."},0,{fa:"تفسیر است. احساس‌های احتمالی: مضطرب، بی‌قرار، خسته.",en:"An interpretation. Possible feelings: anxious, restless, tired."}],
+ [{fa:"احساس ناامیدی می‌کنم.",en:"I feel disappointed."},1,{fa:"این یک احساس واقعی است!",en:"This is a real feeling!"}],
+ [{fa:"احساس نگرانی دارم.",en:"I feel worried."},1,{fa:"این یک احساس واقعی است!",en:"This is a real feeling!"}],
+ [{fa:"احساس دلتنگی می‌کنم.",en:"I feel a longing."},1,{fa:"این یک احساس واقعی است!",en:"This is a real feeling!"}]
+];
+const SCEN=[
+ {fa:"همکارت در جلسه چند بار وسط حرفت شروع به صحبت کرد.",en:"A coworker started talking over you several times in a meeting."},
+ {fa:"فرزندت دیروقت به خانه آمد و خبر نداده بود.",en:"Your child came home late without letting you know."},
+ {fa:"دوستت قول داده بود کتاب را پس بیاورد؛ دو ماه گذشته.",en:"A friend promised to return your book; two months have passed."},
+ {fa:"همسایه نیمه‌شب موسیقی بلند پخش می‌کند.",en:"A neighbor plays loud music at midnight."},
+ {fa:"همسرت تولدت را فراموش کرد.",en:"Your partner forgot your birthday."},
+ {fa:"هم‌اتاقی‌ات ظرف‌های کثیف را در سینک گذاشته است.",en:"Your roommate left dirty dishes in the sink."},
+ {fa:"در مهمانی، یکی از فامیل می‌پرسد: «پس کی ازدواج می‌کنی؟»",en:"At a gathering, a relative asks: \"So when are you getting married?\""},
+ {fa:"مدیرت بدون پرسیدن، یک پروژه‌ی اضافه به تو داد.",en:"Your manager gave you an extra project without asking."},
+ {fa:"فرزندت هنوز تکلیفش را انجام نداده و ساعت ۹ شب است.",en:"It's 9 pm and your child still hasn't done their homework."},
+ {fa:"برادرت جلوی جمع درباره‌ی تو شوخی کرد و همه خندیدند.",en:"Your brother made a joke about you in front of everyone, and they all laughed."},
+ {fa:"دوستت سر قرار نیم ساعت دیر آمد.",en:"Your friend showed up half an hour late."},
+ {fa:"پدر یا مادرت مدام درباره‌ی شغلت نصیحت می‌کند.",en:"Your parent keeps giving you advice about your career."},
+ {fa:"همکارت کاری را که با هم انجام دادید به نام خودش ارائه کرد.",en:"A coworker presented work you did together as their own."},
+ {fa:"کسی که دوستش داری، یک هفته است کم‌حرف و دور شده.",en:"Someone you love has been quiet and distant for a week."}
+];
+const JACKAL=[
+ [{fa:"تو اصلاً به فکر من نیستی!",en:"You don't care about me at all!"},{fa:"آیا دلخوری چون دوست داری ببینی برای من مهمی؟",en:"Are you upset because you'd like to know you matter to me?"}],
+ [{fa:"هیچ‌کس تو این خونه کمک نمی‌کنه!",en:"Nobody in this house ever helps!"},{fa:"آیا خسته‌ای و به همکاری و حمایت نیاز داری؟",en:"Are you exhausted and needing cooperation and support?"}],
+ [{fa:"دیگه نمی‌خوام ببینمت.",en:"I don't want to see you anymore."},{fa:"آیا خیلی رنجیده‌ای و به احترام و فاصله برای آرام‌شدن نیاز داری؟",en:"Are you deeply hurt and needing respect and some space to calm down?"}],
+ [{fa:"تو همیشه حق رو به خودت می‌دی.",en:"You always think you're right."},{fa:"آیا کلافه‌ای چون می‌خواهی دیدگاهت هم شنیده شود؟",en:"Are you frustrated because you want your view to be heard too?"}],
+ [{fa:"این چه وضع کار کردنه؟!",en:"What kind of work is this?!"},{fa:"آیا نگرانی چون کیفیت و قابل‌اعتماد بودن کار برایت مهم است؟",en:"Are you worried because quality and reliability matter to you?"}],
+ [{fa:"خسته شدم از بس تکرار کردم!",en:"I'm sick of repeating myself!"},{fa:"آیا ناامیدی چون دوست داری حرفت شنیده و جدی گرفته شود؟",en:"Are you disappointed because you want to be heard and taken seriously?"}],
+ [{fa:"تو منو درک نمی‌کنی.",en:"You don't understand me."},{fa:"آیا احساس تنهایی می‌کنی و به فهمیده‌شدن نیاز داری؟",en:"Are you feeling lonely and needing to be understood?"}],
+ [{fa:"ولم کن، حوصله ندارم.",en:"Leave me alone, I'm not in the mood."},{fa:"آیا خسته‌ای و به استراحت و فضای شخصی نیاز داری؟",en:"Are you tired and needing rest and some space?"}],
+ [{fa:"چرا اینقدر بی‌فکری؟",en:"Why are you so thoughtless?"},{fa:"آیا عصبانی هستی چون امنیت و در نظر گرفته‌شدن برایت مهم است؟",en:"Are you angry because safety and being considered matter to you?"}],
+ [{fa:"هیچی درست پیش نمی‌ره.",en:"Nothing ever goes right."},{fa:"آیا دلسردی و به امید و کمی آسانی نیاز داری؟",en:"Are you discouraged and needing some hope and ease?"}],
+ [{fa:"تو بچه‌ها رو لوس می‌کنی.",en:"You spoil the kids."},{fa:"آیا نگرانی چون می‌خواهی در تربیت بچه‌ها هماهنگ باشیم؟",en:"Are you worried because you want us to be aligned in raising the kids?"}],
+ [{fa:"معلومه که برات مهم نیستم.",en:"Obviously I don't matter to you."},{fa:"آیا غمگینی و به نشانه‌ای از محبت و ارزشمندی نیاز داری؟",en:"Are you sad and needing a sign of love and that you matter?"}]
+];
+
+/* ---------- CARDS ---------- */
+const K={feel:{fa:"احساس",en:"Feeling"},need:{fa:"نیاز",en:"Need"},pleasant:{fa:"خوشایند",en:"pleasant"},unpleasant:{fa:"ناخوشایند",en:"unpleasant"},
+ obs:{fa:"مشاهده یا قضاوت؟",en:"Observation or judgment?"},o1:{fa:"مشاهده",en:"Observation"},o0:{fa:"قضاوت",en:"Judgment"},
+ req:{fa:"درخواست یا خواسته؟",en:"Request or demand?"},r1:{fa:"درخواست",en:"Request"},r0:{fa:"خواسته",en:"Demand"},
+ ps:{fa:"احساس یا فکر؟",en:"Feeling or thought?"},p1:{fa:"احساس",en:"Feeling"},p0:{fa:"فکر",en:"Thought"},
+ sc:{fa:"موقعیت",en:"Situation"},jk:{fa:"کارت شغال",en:"Jackal card"},gr:{fa:"گوش زرافه",en:"Giraffe ears"},cat:{fa:"دسته: ",en:"Category: "}};
+const ix=()=>L==="fa"?0:1;
+function wordCard(word,kind,color,sub){return `<div class="card" style="--c:${color}"><div class="band"></div><div class="kind">${t(kind)}</div><div class="face big">${esc(word)}</div>${sub?`<div class="sub">${sub}</div>`:""}</div>`}
+function quizCard(text,kind,color,tag,ans,f){return `<div class="card wide ${f?"clickable":""}" style="--c:${color}"><div class="band"></div><div class="kind">${t(kind)}</div><div class="face">${esc(text)}</div><div class="back"><span class="tag">${t(tag)}</span><div>${esc(ans)}</div></div></div>`}
+const fMet=w=>wordCard(w[ix()],K.feel,"var(--feel)",t(K.pleasant));
+const fUn=w=>wordCard(w[ix()],K.feel,"var(--feel)",t(K.unpleasant));
+const needC=n=>wordCard(n[ix()],K.need,"var(--need)",t(K.cat)+CAT[n[2]][ix()]);
+const obsC=(o,f)=>quizCard(t(o[0]),K.obs,"var(--obs)",o[1]?K.o1:K.o0,t(o[2]),f);
+const reqC=(o,f)=>quizCard(t(o[0]),K.req,"var(--req)",o[1]?K.r1:K.r0,t(o[2]),f);
+const psC=(o,f)=>quizCard(t(o[0]),K.ps,"var(--ps)",o[1]?K.p1:K.p0,t(o[2]),f);
+const scC=s=>`<div class="card wide" style="--c:var(--sc)"><div class="band"></div><div class="kind">${t(K.sc)}</div><div class="face">${esc(t(s))}</div></div>`;
+const jkC=(j,f)=>quizCard((L==="fa"?"«":"“")+t(j[0])+(L==="fa"?"»":"”"),K.jk,"var(--jk)",K.gr,t(j[1]),f);
+const clC=(c,f)=>quizCard(t(c[0]),{fa:"روشن بگو",en:"Say it clearly"},"#24524e",{fa:"نسخه‌ی روشن",en:"Clear version"},t(c[1]),f);
+const anyFeel=()=>Math.random()<.5?fMet(pick(FEEL_MET)):fUn(pick(FEEL_UNMET));
+const allFeel=()=>FEEL_MET.map(fMet).join("")+FEEL_UNMET.map(fUn).join("");
+
+const DECKS={
+ feel:{draw:()=>[anyFeel()],all:()=>`<div class="grid">${allFeel()}</div>`},
+ feelneed:{draw:()=>[anyFeel(),needC(pick(NEEDS))],both:1,all:()=>`<h3 class="dh" style="color:var(--feel)">${t(UI.feelDeck)}</h3><div class="grid">${allFeel()}</div><h3 class="dh" style="color:var(--need)">${t(UI.needDeck)}</h3><div class="grid">${NEEDS.map(needC).join("")}</div>`},
+ obs:{draw:()=>[obsC(pick(OBS),1)],flip:1,all:()=>`<div class="grid">${OBS.map(o=>obsC(o)).join("")}</div>`},
+ pseudo:{draw:()=>[psC(pick(PSEUDO),1)],flip:1,all:()=>`<div class="grid">${PSEUDO.map(o=>psC(o)).join("")}</div>`},
+ req:{draw:()=>[reqC(pick(REQ),1)],flip:1,all:()=>`<div class="grid">${REQ.map(o=>reqC(o)).join("")}</div>`},
+ scen:{draw:()=>[scC(pick(SCEN))],all:()=>`<div class="grid">${SCEN.map(scC).join("")}</div>`},
+ clear:{draw:()=>[clC(pick(CLEAR),1)],flip:1,all:()=>`<div class="grid">${CLEAR.map(c=>clC(c)).join("")}</div>`},
+ jackal:{draw:()=>[jkC(pick(JACKAL),1)],flip:1,all:()=>`<div class="grid">${JACKAL.map(j=>jkC(j)).join("")}</div>`}
+};
+
+const GAMES=[
+ {id:"detective",deck:"feel",color:"var(--feel)",
+  name:{fa:"کارآگاه احساس",en:"Feeling Detective"},
+  meta:{fa:"۳ تا ۸ نفر · ۲۰ دقیقه · کارت‌های احساس",en:"3–8 players · 20 min · feeling cards"},
+  rules:{fa:["فقط کارت‌های احساس را (خوشایند و ناخوشایند) رو به بالا وسط میز بچینید.","نفر اول یک ماجرای کوتاه واقعی از هفته‌اش تعریف می‌کند، بدون گفتن حسش.","بقیه هر کدام یک یا دو کارت احساس را که حدس می‌زنند جلوی قصه‌گو می‌گذارند.","قصه‌گو کارت‌هایی را که با حس او جور است نگه می‌دارد و درباره‌شان کمی می‌گوید.","هر کس کارتش پذیرفته شد یک امتیاز می‌گیرد؛ ولی هدف اصلی دیده‌شدن قصه‌گوست، نه برد."],
+         en:["Lay only the feeling cards (pleasant and unpleasant) face up in the middle.","The first player tells a short true story from their week, without naming their feelings.","Everyone else places one or two feeling cards they guess in front of the storyteller.","The storyteller keeps the cards that fit and says a little about them.","Each accepted card earns a point, but the real goal is for the storyteller to feel seen, not to win."]},
+  frame:{fa:"«وقتی این را می‌گویی، حدس می‌زنم احساس ___ داری.»",en:"\"As you tell this, I'm guessing you feel ___.\""}},
+ {id:"guess",deck:"feelneed",color:"var(--need)",
+  name:{fa:"حدس همدلانه",en:"Empathy Guess"},
+  meta:{fa:"۲ تا ۶ نفر · ۲۵ دقیقه · دو دسته‌ی جدا: احساس و نیاز",en:"2–6 players · 25 min · two separate decks: feelings and needs"},
+  rules:{fa:["دو دسته را جدا نگه دارید: کارت‌های احساس (نارنجی) در یک ردیف، کارت‌های نیاز (سبز) در ردیفی دیگر.","یک نفر یک موقعیت سخت را می‌گوید (یا یک کارت «موقعیت» می‌کشد).","هم‌بازی‌ها به نوبت یک احساس و یک نیاز را برمی‌دارند و با جمله‌ی زیر حدس می‌زنند.","گوینده هر بار فقط می‌گوید «بیشتر» یا «کمتر» تا به جفتی برسید که واقعاً درست است.","در پایان گوینده می‌گوید شنیده‌شدن چه حسی داشت."],
+         en:["Keep the two decks apart: feeling cards (orange) in one row, need cards (green) in another.","One player describes a hard situation (or draws a Situation card).","Others take turns picking one feeling and one need, and guess using the sentence below.","The speaker answers only \"warmer\" or \"colder\" until you find the pair that truly fits.","Finally, the speaker shares what it was like to be heard."]},
+  frame:{fa:"«آیا احساس ___ می‌کنی، چون برایت ___ مهم است؟»",en:"\"Are you feeling ___ because ___ matters to you?\""}},
+ {id:"obs",deck:"obs",color:"var(--obs)",
+  name:{fa:"مشاهده یا قضاوت؟",en:"Observation or Judgment?"},
+  meta:{fa:"۲ نفر به بالا · ۱۵ دقیقه",en:"2+ players · 15 min"},
+  rules:{fa:["یک کارت بکشید و جمله را بلند بخوانید.","همه هم‌زمان با دست نشان دهند: کف دست باز = مشاهده، مشت = قضاوت.","کارت را برگردانید و پاسخ را بخوانید.","اگر قضاوت بود، گروه با هم آن را به یک مشاهده‌ی «دوربینی» تبدیل کند.","امتیاز اضافه برای بهترین بازنویسی."],
+         en:["Draw a card and read the sentence aloud.","Everyone shows at once: open palm = observation, fist = judgment.","Flip the card and read the answer.","If it's a judgment, rewrite it together as a \"camera\" observation.","Bonus point for the best rewrite."]},
+  frame:{fa:"آزمون دوربین: اگر یک دوربین فیلم‌برداری بود، دقیقاً همین را ثبت می‌کرد؟",en:"The camera test: would a video camera record exactly this?"}},
+ {id:"pseudo",deck:"pseudo",color:"var(--ps)",
+  name:{fa:"احساس یا فکر؟",en:"Feeling or Thought?"},
+  meta:{fa:"۲ نفر به بالا · ۱۵ دقیقه",en:"2+ players · 15 min"},
+  rules:{fa:["یک کارت بکشید و جمله را بخوانید.","تصمیم بگیرید: احساس واقعی است یا فکر و تفسیر درباره‌ی کار دیگران؟","کارت را برگردانید.","اگر فکر بود، از کارت‌های احساس، دو حس واقعی پشت آن را پیدا کنید."],
+         en:["Draw a card and read the sentence.","Decide: is it a real feeling, or a thought about what others did?","Flip the card.","If it's a thought, find two real feelings behind it from the feeling cards."]},
+  frame:{fa:"نشانه: اگر بعد از «احساس می‌کنم» کلمه‌ای مثل «شدم» یا «که تو…» آمد، احتمالاً فکر است.",en:"Clue: words like \"ignored\", \"rejected\" or \"that you…\" after \"I feel\" usually signal a thought."}},
+ {id:"req",deck:"req",color:"var(--req)",
+  name:{fa:"درخواست یا خواسته؟",en:"Request or Demand?"},
+  meta:{fa:"۲ نفر به بالا · ۱۵ دقیقه",en:"2+ players · 15 min"},
+  rules:{fa:["یک کارت بکشید و جمله را بخوانید.","بپرسید: مثبت است؟ مشخص است؟ جای «نه» گفتن دارد؟","حدس بزنید، بعد کارت را برگردانید.","اگر خواسته بود، آن را به یک درخواست روشن و مثبت بازنویسی کنید."],
+         en:["Draw a card and read it.","Ask: is it positive? specific? is there room for \"no\"?","Guess, then flip the card.","If it's a demand, rewrite it as a clear, positive request."]},
+  frame:{fa:"محک: اگر طرف «نه» بگوید و ما برنجیم یا تنبیهش کنیم، آن یک خواسته بوده است.",en:"The test: if they say \"no\" and we punish or resent them, it was a demand."}},
+ {id:"four",deck:"scen",color:"var(--sc)",
+  name:{fa:"چهار گام",en:"Four Steps"},
+  meta:{fa:"۲ تا ۶ نفر · ۳۰ دقیقه · همه‌ی کارت‌ها",en:"2–6 players · 30 min · all decks"},
+  rules:{fa:["یک کارت «موقعیت» بکشید.","بازیکن نوبت، با کمک کارت‌های احساس و نیاز، یک جمله‌ی کامل چهار مرحله‌ای می‌سازد.","گروه بررسی کند: مشاهده بی‌قضاوت است؟ احساس واقعی است؟ نیاز جهانی است؟ درخواست مشخص است؟","نقش‌ها را عوض کنید: یکی طرف مقابل شود و پاسخ دهد؛ دیگری با همدلی بشنود."],
+         en:["Draw a Situation card.","The active player builds a full four-step sentence, using the feeling and need cards.","The group checks: is the observation judgment-free? the feeling real? the need universal? the request specific?","Switch roles: one plays the other person and replies; another listens with empathy."]},
+  frame:{fa:"«وقتی ___، احساس ___ می‌کنم، چون ___ برایم مهم است. آیا حاضری ___ ؟»",en:"\"When ___, I feel ___, because ___ matters to me. Would you be willing to ___?\""}},
+ {id:"giraffe",deck:"jackal",color:"var(--jk)",
+  name:{fa:"گوش زرافه",en:"Giraffe Ears"},
+  meta:{fa:"۲ نفر به بالا · ۲۰ دقیقه",en:"2+ players · 20 min"},
+  rules:{fa:["یک کارت شغال بکشید و با لحن واقعی بخوانید.","بقیه به نوبت با «گوش زرافه» گوش دهند: به‌جای دفاع یا حمله، احساس و نیاز پشت حرف را حدس بزنند.","کارت را برگردانید و نمونه‌ی پاسخ را ببینید؛ پاسخ شما می‌تواند متفاوت و حتی بهتر باشد."],
+         en:["Draw a Jackal card and read it in a realistic tone.","Others take turns listening with \"giraffe ears\": instead of defending or attacking, guess the feeling and need behind the words.","Flip the card to see a sample response; yours may be different, or even better."]},
+  frame:{fa:"چهار راه شنیدن: سرزنش خود، سرزنش دیگری، دیدن احساس و نیاز خود، دیدن احساس و نیاز دیگری.",en:"Four ways to hear: blame myself, blame the other, sense my own feelings and needs, sense theirs."}}
+,
+ {id:"clear",deck:"clear",color:"#24524e",
+  name:{fa:"روشن بگو",en:"Say It Clearly"},
+  meta:{fa:"۲ نفر به بالا · ۱۵ دقیقه",en:"2+ players · 15 min"},
+  rules:{fa:["یک کارت بکشید و جمله‌ی مبهم یا تند را بخوانید.","هر بازیکن در ۳۰ ثانیه نسخه‌ی روشن خودش را می‌گوید: اصل حرف اول، مشخص، مثبت.","کارت را برگردانید و نمونه را ببینید.","گروه به روشن‌ترین و مهربان‌ترین نسخه رأی می‌دهد."],
+         en:["Draw a card and read the vague or harsh sentence.","Each player has 30 seconds to say their clear version: main point first, specific, positive.","Flip the card to see an example.","The group votes for the clearest, kindest version."]},
+  frame:{fa:"چک‌لیست: چه می‌خواهم؟ مشخص است؟ زمان دارد؟ احترام دارد؟",en:"Checklist: what do I want? Is it specific? Does it have a time? Is it respectful?"}}
+];
+
+const DECKS_SOON=[
+ {c:"var(--feel)",s:["شاد","آرام","نگران"],se:["calm","glad","worried"],h:{fa:"دسته‌ی احساس‌ها",en:"Feelings deck"},p:{fa:"۴۸ کارت احساس، خوشایند و ناخوشایند.",en:"48 feeling cards, pleasant and unpleasant."}},
+ {c:"var(--need)",s:["احترام","امنیت","آزادی"],se:["respect","safety","freedom"],h:{fa:"دسته‌ی نیازها",en:"Needs deck"},p:{fa:"۳۴ کارت نیاز در هفت دسته.",en:"34 need cards in seven groups."}},
+ {c:"var(--obs)",s:["؟","✓","✗"],se:["?","✓","✗"],h:{fa:"بسته‌ی تمرین",en:"Practice pack"},p:{fa:"مشاهده یا قضاوت، احساس یا فکر، درخواست یا خواسته.",en:"Observation or judgment, feeling or thought, request or demand."}},
+ {c:"var(--jk)",s:["🐺","♥","🦒"],se:["🐺","♥","🦒"],h:{fa:"موقعیت‌ها و گوش زرافه",en:"Situations & Giraffe Ears"},p:{fa:"موقعیت‌های روزمره و کارت‌های شغال برای تمرین همدلی.",en:"Everyday situations and jackal cards for practicing empathy."}}
+];
+
+/* ---------- RENDER ---------- */
+const VIEWS=["home","learn","skills","play","decks","about"];
+let currentGame="detective";
+
+function renderStatic(){
+  document.documentElement.lang=L; document.documentElement.dir=L==="fa"?"rtl":"ltr";
+  document.title=L==="fa"?"بیان امن و اثربخش · Safe and Effective Expression":"Safe and Effective Expression · بیان امن و اثربخش";
+  document.querySelectorAll("[data-t]").forEach(el=>{el.innerHTML=t(UI[el.dataset.t])});
+  document.getElementById("langBtn").textContent=t(UI.lang);
+  document.getElementById("links").innerHTML=VIEWS.map(v=>`<a href="#${v}" data-v="${v}">${t(UI.nav[v])}</a>`).join("");
+  document.getElementById("steps4").innerHTML=STEPS.map(s=>`<div class="st" style="--c:${s.c}"><div class="n">${t(s.n)}</div><h3>${t(s.h)}</h3><p>${t(s.p)}</p><div class="ex">${t(s.ex)}</div></div>`).join("");
+  document.getElementById("fullSentence").textContent=t(FULL);
+  document.getElementById("skills").innerHTML=SKILLS.map((k,i)=>`<div class="sk"><div class="n">${L==="fa"?(i+1).toLocaleString("fa-IR"):i+1}</div><h3>${t(k.h)}</h3><p>${t(k.p)}</p><ul>${t(k.b).map(x=>`<li>${x}</li>`).join("")}</ul><div class="ex">${t(k.ex)}</div></div>`).join("");
+  document.getElementById("ways").innerHTML=WAYS.map(w=>`<li>${t(w)}</li>`).join("");
+  document.getElementById("decks").innerHTML=DECKS_SOON.map(d=>`<div class="dk" style="--c:${d.c}"><div class="art">${(L==="fa"?d.s:d.se).map(x=>`<span>${x}</span>`).join("")}</div><div class="body"><h3>${t(d.h)}</h3><p>${t(d.p)}</p></div></div>`).join("");
+  document.getElementById("gtabs").innerHTML=GAMES.map(g=>`<button data-g="${g.id}">${t(g.name)}</button>`).join("");
+  renderGame(); route();
+}
+function renderGame(){
+  const g=GAMES.find(x=>x.id===currentGame), d=DECKS[g.deck];
+  document.querySelectorAll("#gtabs button").forEach(b=>b.classList.toggle("on",b.dataset.g===g.id));
+  const p=document.getElementById("gpanel");
+  p.innerHTML=`<h2 style="color:${g.color}">${t(g.name)}</h2><div class="meta">${t(g.meta)}</div>
+   <div class="rules"><b>${t(UI.howTo)}</b><ol>${t(g.rules).map(r=>`<li>${r}</li>`).join("")}</ol><div class="frame">${t(g.frame)}</div></div>
+   <div class="play"><div class="btns"><button class="btn draw">${t(d.both?UI.drawBoth:UI.draw)}</button><button class="btn alt clear">${t(UI.clear)}</button></div>
+   <div class="hand"></div>${d.flip?`<div class="hint">${t(UI.tapHint)}</div>`:""}</div>
+   <details class="deck"><summary>${t(UI.allCards)}</summary>${d.all()}</details>`;
+  const hand=p.querySelector(".hand");
+  p.querySelector(".draw").onclick=()=>{hand.innerHTML=d.draw().join("")};
+  p.querySelector(".clear").onclick=()=>{hand.innerHTML=""};
+  hand.addEventListener("click",e=>{const c=e.target.closest(".card.clickable");if(c)c.classList.toggle("flipped")});
+}
+function route(){
+  const h=location.hash.slice(1); const v=VIEWS.includes(h)?h:"home";
+  document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on",s.id==="v-"+v));
+  document.querySelectorAll("#links a").forEach(a=>a.classList.toggle("on",a.dataset.v===v));
+}
+window.addEventListener("hashchange",()=>{route();window.scrollTo(0,0)});
+document.getElementById("gtabs").addEventListener("click",e=>{const b=e.target.closest("button");if(b){currentGame=b.dataset.g;renderGame()}});
+document.getElementById("langBtn").onclick=()=>{L=L==="fa"?"en":"fa";try{localStorage.setItem("zd-lang",L)}catch(e){}renderStatic()};
+renderStatic();
+</script>
+</body>
+</html>
